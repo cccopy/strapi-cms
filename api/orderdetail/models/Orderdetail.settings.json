@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "orderdetails",
+  "info": {
+    "name": "orderdetail",
+    "description": "訂單詳細項目。"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "ownOrder": {
+      "model": "order",
+      "via": "details"
+    },
+    "item": {
+      "model": "item"
+    },
+    "parentDetail": {
+      "model": "orderdetail"
+    },
+    "status": {
+      "enum": [
+        "等待審核素材",
+        "素材審核中",
+        "素材審核失敗",
+        "拍攝剪輯中",
+        "A copy交付",
+        "A copy修改",
+        "B copy交付",
+        "B copy修改",
+        "C copy交付",
+        "成品已確認"
+      ],
+      "type": "enumeration"
+    },
+    "products": {
+      "collection": "product",
+      "via": "orderdetail"
+    },
+    "material": {
+      "model": "material",
+      "via": "orderdetail"
+    }
+  }
+}

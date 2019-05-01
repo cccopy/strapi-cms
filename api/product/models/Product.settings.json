@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "products",
+  "info": {
+    "name": "product",
+    "description": "成品清單。"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "orderdetail": {
+      "model": "orderdetail",
+      "via": "products"
+    },
+    "video": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "level": {
+      "enum": [
+        "A copy",
+        "B copy",
+        "C copy"
+      ],
+      "type": "enumeration"
+    },
+    "modification": {
+      "model": "modification",
+      "via": "product"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "modifications",
+  "info": {
+    "name": "modification",
+    "description": "修改單。"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "product": {
+      "model": "product",
+      "via": "modification"
+    },
+    "overall": {
+      "required": true,
+      "type": "text"
+    },
+    "secsDetails": {
+      "type": "json"
+    },
+    "isPublish": {
+      "type": "boolean"
+    }
+  }
+}

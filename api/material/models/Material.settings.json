@@ -1,0 +1,64 @@
+{
+  "connection": "default",
+  "collectionName": "materials",
+  "info": {
+    "name": "material",
+    "description": "素材。"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "context": {
+      "type": "text"
+    },
+    "revelation": {
+      "type": "text"
+    },
+    "hopeReaction": {
+      "type": "text"
+    },
+    "purpose": {
+      "type": "text"
+    },
+    "shootingDate": {
+      "type": "date"
+    },
+    "shootingAddress": {
+      "type": "string"
+    },
+    "performerList": {
+      "type": "json"
+    },
+    "mapScenario": {
+      "type": "json"
+    },
+    "logoFile": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "masterVision": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "exampleUrls": {
+      "type": "json"
+    },
+    "additions": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "mapSubmitFactors": {
+      "type": "json"
+    },
+    "orderdetail": {
+      "model": "orderdetail",
+      "via": "material"
+    }
+  }
+}

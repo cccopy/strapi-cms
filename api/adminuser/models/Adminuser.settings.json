@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "adminusers",
+  "info": {
+    "name": "adminuser",
+    "description": "後台使用者。"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "required": true,
+      "type": "password"
+    },
+    "email": {
+      "required": true,
+      "type": "email"
+    },
+    "role": {
+      "required": true,
+      "enum": [
+        "SuperAdmin",
+        "Admin",
+        "PL",
+        "Planner",
+        "Sales",
+        ""
+      ],
+      "type": "enumeration"
+    },
+    "cases": {
+      "collection": "case",
+      "via": "adminuser"
+    }
+  }
+}

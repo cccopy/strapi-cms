@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "cases",
+  "info": {
+    "name": "case",
+    "description": "PL專用單"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "adminuser": {
+      "model": "adminuser",
+      "via": "cases"
+    },
+    "order": {
+      "model": "order"
+    },
+    "turnover": {
+      "type": "integer",
+      "required": true
+    },
+    "outsourceList": {
+      "type": "json"
+    }
+  }
+}

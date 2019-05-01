@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "keywords",
+  "info": {
+    "name": "keyword",
+    "description": "關鍵字；管理商品標籤"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "word": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true
+    },
+    "items": {
+      "collection": "item",
+      "via": "keywords"
+    }
+  }
+}

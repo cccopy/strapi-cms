@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": "訂單管理。"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "serialNumber": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "status": {
+      "required": true,
+      "enum": [
+        "草稿",
+        "未付款",
+        "已付款",
+        "已完成",
+        "已取消"
+      ],
+      "type": "enumeration"
+    },
+    "ownClient": {
+      "model": "client",
+      "via": "orders"
+    },
+    "details": {
+      "collection": "orderdetail",
+      "via": "ownOrder"
+    }
+  }
+}

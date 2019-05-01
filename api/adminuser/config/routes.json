@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/adminusers",
+      "handler": "Adminuser.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/adminusers/count",
+      "handler": "Adminuser.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/adminusers/:id",
+      "handler": "Adminuser.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/adminusers",
+      "handler": "Adminuser.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/adminusers/:id",
+      "handler": "Adminuser.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/adminusers/:id",
+      "handler": "Adminuser.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

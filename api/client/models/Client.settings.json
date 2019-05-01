@@ -1,0 +1,72 @@
+{
+  "connection": "default",
+  "collectionName": "clients",
+  "info": {
+    "name": "client",
+    "description": "客戶清單。\nname: 姓名、\nnickname: 暱稱、\nemail: E-mail、\npw: 密碼、\ncellphone: 行動電話、\nphone: 聯絡市話、\naddress: 地址、\ncompany: 公司名稱、\ntax_id: 統編、\nindustry_category: 產業別(下拉選單)、\njob_title: 職稱(下拉選單)\n"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "nickname": {
+      "type": "string"
+    },
+    "email": {
+      "unique": true,
+      "required": true,
+      "type": "email"
+    },
+    "pw": {
+      "required": true,
+      "type": "password"
+    },
+    "cellphone": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "taxId": {
+      "type": "string"
+    },
+    "industryCategory": {
+      "type": "string"
+    },
+    "jobTitle": {
+      "type": "string"
+    },
+    "isVerify": {
+      "type": "boolean"
+    },
+    "forgetPassKey": {
+      "type": "string"
+    },
+    "orders": {
+      "collection": "order",
+      "via": "ownClient"
+    },
+    "provider": {
+      "required": true,
+      "enum": [
+        "local",
+        "fb",
+        "google"
+      ],
+      "default": "local",
+      "type": "enumeration"
+    }
+  }
+}

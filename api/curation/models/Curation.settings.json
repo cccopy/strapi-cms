@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "curations",
+  "info": {
+    "name": "curation",
+    "description": "熱銷企劃。"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "mainImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "title": {
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "required": true,
+      "type": "text"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "items": {
+      "collection": "item",
+      "via": "curations",
+      "dominant": true
+    }
+  }
+}
