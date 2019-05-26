@@ -20,7 +20,8 @@
     },
     "email": {
       "required": true,
-      "type": "email"
+      "type": "email",
+      "unique": true
     },
     "role": {
       "required": true,

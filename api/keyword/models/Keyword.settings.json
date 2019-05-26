@@ -22,10 +22,6 @@
     "visible": {
       "type": "boolean",
       "default": true
-    },
-    "items": {
-      "collection": "item",
-      "via": "keywords"
     }
   }
 }

@@ -77,11 +77,6 @@
     "otherProperties": {
       "type": "json"
     },
-    "keywords": {
-      "collection": "keyword",
-      "via": "items",
-      "dominant": true
-    },
     "category": {
       "model": "category",
       "via": "items"
@@ -89,6 +84,9 @@
     "curations": {
       "collection": "curation",
       "via": "items"
+    },
+    "keywords": {
+      "type": "json"
     }
   }
 }

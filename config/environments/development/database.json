@@ -5,11 +5,11 @@
       "connector": "strapi-hook-bookshelf",
       "settings": {
         "client": "mysql",
-        "host": "127.0.0.1",
+        "host": "ccopydbinstance.cniri0fdemsg.ap-northeast-1.rds.amazonaws.com",
         "port": 3306,
         "database": "cccopy",
-        "username": "root",
-        "password": "root"
+        "username": "miecowbai",
+        "password": "ehgrelxl0527"
       },
       "options": {
         "pool":{

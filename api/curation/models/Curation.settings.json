@@ -36,8 +36,8 @@
     },
     "items": {
       "collection": "item",
-      "via": "curations",
-      "dominant": true
+      "dominant": true,
+      "via": "curations"
     }
   }
 }
